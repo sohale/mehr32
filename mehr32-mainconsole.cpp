@@ -1,4 +1,9 @@
-﻿#include <conio.h>
+/* ******************************************** *
+ *    mehr32 main file (mehr32console.cpp)
+ *    Author: Sohail Siadatnejad
+ *    (c) March 2000
+ * ******************************************** */
+#include <conio.h>
 #include "myheader.h"
 #include "Compont1.h"
 
@@ -76,10 +81,13 @@
 
 	#define TIMER(srate) timer=new Timer();timer->reattachConstant("freq",srate);
 
-/* ****************************************************** */
 
 
 
+
+/* ****************************************************** *
+ *              excerpt of include files                  *
+ * ****************************************************** */
 
 
 //Plucked string, excitation signal study
@@ -1058,6 +1066,16 @@ Source*GeneralOutputFilter(Source*x)
 }
 
 #define ADDITEM(nm, name) {strcat(names, "  " ); strcat(names, #nm ); strcat(names, " = " ); strcat(names, #name ); strcat(names, "\n" );if(maxi<nm)maxi=nm;}
+
+
+
+
+
+
+/* ****************************************************** *
+ *                         main file                      *
+ * ****************************************************** */
+
 
 #include<string.h>
 
