@@ -1,7 +1,10 @@
 /* ******************************************** *
- *    mehr32 main file (mehr32console.cpp)
+ *    mehr32
  *    Author: Sohail Siadatnejad
  *    (c) March 2000
+ *
+ * Note: This is a selection of files (for my BSc Thesis)
+ *   these functions were originally in separate include files.
  * ******************************************** */
 
 #include <conio.h>
