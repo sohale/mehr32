@@ -3,6 +3,7 @@
  *    Author: Sohail Siadatnejad
  *    (c) March 2000
  * ******************************************** */
+
 #include <conio.h>
 #include "myheader.h"
 #include "Compont1.h"
@@ -15,6 +16,7 @@
 #include "Impulse.h"
 #include "Aggregat.h"
 
+//Instantiates parametric Component Patterns
 #include "Compont2.h"
 
 #include "PluckIns.h"
@@ -33,7 +35,7 @@
 
 
 /* ********************************************************
- *  Macros for model patterns
+ *  Macros for model patterns. Example components.
  * ******************************************************** */
 
 	Source* selector(Source*s0, Source*s1, char*keys, char*name)
@@ -178,6 +180,9 @@ void pluck2(char* exc, real factor, real falloff, bool distort, real tune)
 	PLAYMONO(boost(o,8));
 }
 
+/******************
+ *   Percussions  *
+ ******************/
 void rythms()
 {
 
@@ -256,7 +261,9 @@ void rythms()
 }
 
 
-
+/********************************************
+ * An instrumnt based on KS Plucked String  *
+ ********************************************/
 
 void space_pluck(char* prce, real alpha, bool distort)
 {
@@ -345,7 +352,10 @@ void space_pluck(char* prce, real alpha, bool distort)
 
 }
 
-
+/**********************************************************
+ * A demo setup of the Karplus-Strong Plucked String      *
+ * model of string instruments                            *
+ **********************************************************/
 void karplus()
 {
 
@@ -399,8 +409,9 @@ void karplus()
 }
 
 
-
-//not good
+/******************************************************
+ * "Chorus" 2 sound effect added to the instrument set up
+ ******************************************************/
 Component* chorus2(int N, Source*ss)
 {
 	Component*mix=new Mix(N);
@@ -422,7 +433,9 @@ Component* chorus2(int N, Source*ss)
 	return mix;
 }
 
-//a simple variable delay
+/**************************************
+ * A simple time-variable line delay  *
+ **************************************/
 Source*flang0(Source*ss)
 {
 	Component*sinosc=new SinOscillator();
@@ -460,6 +473,10 @@ void EffectPlayAFile(char*filename)
 	PLAYMONO(selector3(wavin,chorus2(2,wavin),flang0(wavin),"`12","Normal|Chorus|Flanger"));
 }
 
+/******************************************************
+ * "Chorus" "LL" sound effect added to the instrument set up
+ ******************************************************/
+
 Component* chorusLL(int N, Source*ss)	//with low latency
 {
 	Component*mix=new Mix(N);
@@ -483,7 +500,9 @@ Component* chorusLL(int N, Source*ss)	//with low latency
 }
 
 
-//COOL NICE tiny voice
+/*****************************************************
+ * An instrument with COOL NICE tiny voice (Nov 2000)
+ *****************************************************/
 void pluckedTiny()	//18AzarThur1379 03:59pm-05:57pm
 {
 	TIMER(44100);
@@ -524,6 +543,10 @@ void pluckedTiny()	//18AzarThur1379 03:59pm-05:57pm
 
 }
 
+/******************************************************
+ * Standard "Chorus" sound effect
+ ******************************************************/
+
 Component* chorus(int N, Source*ss)
 {
 	Component*mix=new Mix(N);
@@ -546,7 +569,9 @@ Component* chorus(int N, Source*ss)
 	return mix;
 }
 
-
+/******************************************************
+ * Plucked String with Chorus effect
+ ******************************************************/
 void pluckedChorus()
 {
 	TIMER(44100);
@@ -577,7 +602,11 @@ void pluckedChorus()
 }
 
 
-//after ACM
+
+/******************************************************
+ * Plucked String with Flanger effect
+ * //after ACM
+ ******************************************************/
 void pluckedFlang()	//10AzarThur1379 03:40 to-have-done-something-for-today
 {
 	TIMER(44100);
@@ -593,7 +622,9 @@ void pluckedFlang()	//10AzarThur1379 03:40 to-have-done-something-for-today
 	Source*s=selector(ss,flang0(ss), "`1", "Flanger");
 	PLAYMONO(boost(s,0.6));
 }
-
+/******************************************************
+ * Retro instrument
+ ******************************************************/
 void retro1()
 {
 	timer=new Timer();
@@ -622,6 +653,10 @@ void retro1()
 	PLAYMONO(lp);
 };
 
+/******************************************************
+ * Cache is a standard component for defining feedback loops
+ *  This prevents multiple evaluations.
+ ******************************************************/
 
 Component*cache(Source*s)
 {
@@ -629,6 +664,7 @@ Component*cache(Source*s)
 	c->attach("input",s);
 	return c;
 }
+
 void VOSIM2()
 {
 	timer=new Timer();
@@ -684,7 +720,7 @@ void VOSIM2()
 }
 
 /*
-	Its freq form is similar to its wave form!
+	Its frequency form is similar to its waveform!
 */
 void VOSIM1()
 {
@@ -905,7 +941,9 @@ void plucked2()	//18MehrMon1379 21:11
 	attachGlobalOutput(GeneralOutputFilter(pluck->getLineout()));
 	Action();
 }
-
+/**************************************************
+ * Simulated human whistle sound. Very realistic. (Sept 2000)
+ **************************************************/
 void whistle1(bool elastic, bool reverb)	//17MehrSun1379Noon12:59
 {
 	Timer *t=new Timer();
@@ -968,6 +1006,10 @@ void whistle1(bool elastic, bool reverb)	//17MehrSun1379Noon12:59
 	quit();
 }
 
+/******************************************************
+ * Another Plucked String instrument
+ ******************************************************/
+
 void plucked1()	//16MehrSat1379(12XM)
 {
 	Timer *t=new Timer();
@@ -1015,6 +1057,12 @@ void plucked1()	//16MehrSat1379(12XM)
 	printf("\ndone\n");
 	quit();	//340K random
 }
+
+/******************************************************
+ * A selection of 10 preset circuits / setups 
+ * to play music, percussion, live audio effects 
+ * on micriphone, etc
+ ******************************************************/
 
 void select10()
 {
