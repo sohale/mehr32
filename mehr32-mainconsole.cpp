@@ -1,7 +1,7 @@
 /* ******************************************** *
  *    mehr32
  *    Author: Sohail Siadatnejad
- *    (c) March 2000
+ *    (c) as in March 2001
  *
  * Note: This is a selection of files (for my BSc Thesis)
  *   these functions were originally in separate include files.
