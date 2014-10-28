@@ -3,8 +3,9 @@
  *    Author: Sohail Siadatnejad
  *    (c) as in March 2001
  *
- * Note: This is a selection of files (for my BSc Thesis)
- *   these functions were originally in separate include files.
+ * Note: This listing is only a selection of files (used for my BSc report)
+ * the following functions were originally in separate include files.
+ * The original file contains 14800 lines of code (as in early 2001).
  * *************************************************************** */
 
 #include <conio.h>
