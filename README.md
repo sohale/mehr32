@@ -38,7 +38,7 @@ FPGA implementation: SPDIF input and output fully implemented.
 
 Presented and won joint first rank award (gold coins) (Provided live IO fro audio players but dues too lack oof time, only the Simple FIR & IIR filters were ported to hardware / VHDL ). Here is my [proposal](http://ce.sharif.edu/~fdc/proposals/25.pdf) before winning!
 
-** A Standalone Realtime Digital Audio Reverberator **
+**A Standalone Realtime Digital Audio Reverberator**
 
 > This is a device used in music and audio broadcasting studios for adding virtual acoustic ... interpolation and feedback are implemented with FPGA.
 [http://ce.sharif.edu/~fdc/proposals/25.pdf](http://ce.sharif.edu/~fdc/proposals/25.pdf)
