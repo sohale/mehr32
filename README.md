@@ -3,7 +3,9 @@ mehr32
 Written in 2000.
 
 "Mehr32" (1999 –2000): was my BSc degree project:
-## “Real-time audio processing toolbox in C++ for computer music”.
+
+**“Real-time audio processing toolbox in C++ for computer music”**
+
 Keywords: C++, Real-time, Tcl/Tk, DirectSound, Steinberg VST.
 
 
@@ -36,12 +38,12 @@ Rewrite and refactor using C++ templates.
 ### The FPGA version
 FPGA implementation: SPDIF input and output fully implemented.
 
-Presented and won joint first rank award (gold coins) (Provided live IO fro audio players but dues too lack oof time, only the Simple FIR & IIR filters were ported to hardware / VHDL ). Here is my [proposal](http://ce.sharif.edu/~fdc/proposals/25.pdf) before winning!
+Presented and won joint first rank award (2x gold coins 🟡🟡 prize) (Provided live IO fro audio players but dues too lack oof time, only the Simple FIR & IIR filters were ported to hardware / VHDL ). Here is my [proposal](http://ce.sharif.edu/~fdc/proposals/25.pdf) before winning!
 
 **A Standalone Realtime Digital Audio Reverberator**
 
 > This is a device used in music and audio broadcasting studios for adding virtual acoustic ... interpolation and feedback are implemented with FPGA.
-[http://ce.sharif.edu/~fdc/proposals/25.pdf](http://ce.sharif.edu/~fdc/proposals/25.pdf)
+From [http://ce.sharif.edu/~fdc/proposals/25.pdf](http://ce.sharif.edu/~fdc/proposals/25.pdf)
 
 ### Implemented classes:
 
