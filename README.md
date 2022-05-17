@@ -1,7 +1,8 @@
 mehr32
 ======
 
-"Mehr32" (1999 ñ2000): BSc degree project: ìReal-time audio processing toolbox in C++ for computer musicî.
+"Mehr32" (1999 ‚Äì2000): BSc degree project:
+‚ÄúReal-time audio processing toolbox in C++ for computer music‚Äù.
 Keywords: C++, Real-time, Tcl/Tk, DirectSound, Steinberg VST.
 
 
@@ -18,9 +19,9 @@ Sohail Siadat
 
 
 Related projects:
- 1.	The ìMehr32î (1999 ñ 2000) implemented as my BSc degree project titled ìReal-time audio processing toolbox in C++ for computer musicî. [C++, Real-time, Tcl/Tk, DirectSound, Steinberg VST]. Mehr32 was a C++ library implementing audio processing filters and computer music models of musical instruments for real-time performance on PCs. Example designs included: Real-time reverberator (acoustic environmental effects), string and wind instrument models, and an electric guitar amp. The software could achieve the input/output latency of down to 300ms on a Celeron 366.
+ 1.	The ‚ÄúMehr32‚Äù (1999 ‚Äì 2000) implemented as my BSc degree project titled ‚ÄúReal-time audio processing toolbox in C++ for computer music‚Äù. [C++, Real-time, Tcl/Tk, DirectSound, Steinberg VST]. Mehr32 was a C++ library implementing audio processing filters and computer music models of musical instruments for real-time performance on PCs. Example designs included: Real-time reverberator (acoustic environmental effects), string and wind instrument models, and an electric guitar amp. The software could achieve the input/output latency of down to 300ms on a Celeron 366.
 
- 2.	The ìFPGA Audio reverberatorî (2002): Implemented on Altera CPLD/FPGA. Winner of the First Sharif FPGA Design Contest (FDC); I implemented a working hardware and I implemented (from scratch) both Input and Output modules for the Sony/Phillips Serial Digital audio Interface (SPDIF) protocol. The implemented device applied an IIR filter on the streaming stereo digital audio from a commercial CD player, with less than 3 samples total latency (VHDL/FLEX10K50 CPLD).
+ 2.	The ‚ÄúFPGA Audio reverberator‚Äù (2002): Implemented on Altera CPLD/FPGA. Winner of the First Sharif FPGA Design Contest (FDC); I implemented a working hardware and I implemented (from scratch) both Input and Output modules for the Sony/Phillips Serial Digital audio Interface (SPDIF) protocol. The implemented device applied an IIR filter on the streaming stereo digital audio from a commercial CD player, with less than 3 samples total latency (VHDL/FLEX10K50 CPLD).
 
 
 
