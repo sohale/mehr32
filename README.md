@@ -13,7 +13,11 @@ Note that currently only the main file is provided. The library (.h) files will 
 Note that this was not written in C++ ISO standards. It is using macros which are now discouraged in current C++ standards.
 
 ### History:
-Based on an earlier project previous year 1999 [ohale/jMusic](https://github.com/sohale/jMusic)
+* Based on an earlier project previous year 1999 [sohale/jMusic](https://github.com/sohale/jMusic)
+* 2000: Presented as BSc final project at UI
+* Further extentions: VST plugin, Live Microphone input, granular synthesis
+* FPGA implementation (2002?): SPDIF input and output fully implemented. See [^The-FPGA-version]
+
 
 ### Todo:
 Rewrite and refactor using C++ templates.
@@ -29,7 +33,14 @@ Rewrite and refactor using C++ templates.
  2.	The “FPGA Audio reverberator” (2002): Implemented on Altera CPLD/FPGA. Winner of the First Sharif FPGA Design Contest (FDC); I implemented a working hardware and I implemented (from scratch) both Input and Output modules for the Sony/Phillips Serial Digital audio Interface (SPDIF) protocol. The implemented device applied an IIR filter on the streaming stereo digital audio from a commercial CD player, with less than 3 samples total latency (VHDL/FLEX10K50 CPLD).
 
 
+#### The FPGA version
+FPGA implementation: SPDIF input and output fully implemented.
 
+Presented and won joint first rank award (gold coins) (Provided live IO fro audio players but dues too lack oof time, only the Simple FIR & IIR filters were ported to hardware / VHDL ). Here is my [proposal](http://ce.sharif.edu/~fdc/proposals/25.pdf) before winning!
+
+> A Standalone Realtime Digital Audio Reverberator
+> This is a device used in music and audio broadcasting studios for adding virtual acoustic ... interpolation and feedback are implemented with FPGA.
+[http://ce.sharif.edu/~fdc/proposals/25.pdf](http://ce.sharif.edu/~fdc/proposals/25.pdf)
 
 ### Implemented classes:
 
