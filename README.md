@@ -1,6 +1,7 @@
 mehr32
 ======
-Written in 2000.
+Written in 2000. Sohail Siadat
+
 
 "Mehr32" (1999 –2000): was my BSc degree project:
 
@@ -15,17 +16,16 @@ Note that currently only the main file is provided. The library (.h) files will 
 Note that this was not written in C++ ISO standards. It is using macros which are now discouraged in current C++ standards.
 
 ### History:
-* Based on an earlier project previous year 1999 [sohale/jMusic](https://github.com/sohale/jMusic)
-* 2000: Presented as BSc final project at UI
-* Further extentions: VST plugin, Live Microphone input, granular synthesis
-* FPGA implementation (2002?): SPDIF input and output fully implemented. See [^The-FPGA-version]
+* 1999: (v1) Based on an earlier project previous year 1999 [sohale/jMusic](https://github.com/sohale/jMusic)
+* 2000: (v2) Presented as BSc final project at UI (Thesis report available)
+* 2001: (v3) Further extentions: VST plugin, Live Microphone input, granular synthesis
+* 2004?: Lost all files due to loss of a hard-disk 🥺 in pre-github era.
+* 2002: FPGA implementation (2002?): SPDIF input and output fully implemented. See [^The-FPGA-version]
 
 
-### Todo:
-Rewrite and refactor using C++ templates.
-
-### Sohail Siadat
-
+### Todo
+* Rewrite and refactor using C++ templates.
+* Revive yb reconstructing from the main.cpp from the BSc Thesis file.
 
 
 
