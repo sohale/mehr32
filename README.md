@@ -18,7 +18,7 @@ Note  that this was not written in C++ ISO standards. It is using macros which a
 #### IO implemented:
 * Steinberg VST
 * DirectSound
-* normal buffered Win32 sound output
+* normal buffered Win32 sound output `WP32_play()`
 * SPDIF (FPGA-version only)
 #### Devices:
 * Microphone live (as part of above)

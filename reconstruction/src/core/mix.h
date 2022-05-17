@@ -1,0 +1,3 @@
+class Mix : Component {
+
+};

@@ -181,17 +181,7 @@ void select10()
 	quit();
 }
 
-//Cut ultra-sound ...
-Source*GeneralOutputFilter(Source*x)
-{
-	NEWC(clip, ClipHardSimpleOutput, (0.9));
-	ATT(clip, input, x);
-
-	NEWC(lp, LowPassButterworth, ());
-	ATT(lp, freq,10000);//20000);
-	ATT(lp, input, clip);
-	return lp;
-}
+#include "reconstruction/src/circuits/components/level2/remove_ultrasound.h" // GeneralOutputFilter()
 
 #include "reconstruction/src/easy/add_item.h"
 

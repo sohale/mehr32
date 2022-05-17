@@ -19,4 +19,9 @@ PLAYSTEREO
 PLAYMONO
 ```
 
+non-macro:
+```
+  Action();
+  quit();
+```
 See [reconstruction/src/demo-setups](reconstruction/src/demo-setups) for more with examples

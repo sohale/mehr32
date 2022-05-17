@@ -1,0 +1,3 @@
+class NoDC : Component {
+
+};
