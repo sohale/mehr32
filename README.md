@@ -15,7 +15,7 @@ It was my final degree project developed back in 1999-2000. The full version wil
 Note that currently only the main file is provided. The library (.h) files will be added later.
 Note that this was not written in C++ ISO standards. It is using macros which are now discouraged in current C++ standards.
 
-### History:
+### History
 * 1999: (v1) Based on an earlier project previous year 1999 [sohale/jMusic](https://github.com/sohale/jMusic)
 * 2000: (v2) Presented as BSc final project at UI (Thesis report available)
 * 2001: (v3) Further extentions: VST plugin, Live Microphone input, granular synthesis
