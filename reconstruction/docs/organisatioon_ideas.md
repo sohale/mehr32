@@ -49,13 +49,17 @@ I don't like to put events all over.]
 Besides, they should  be much less than samples!
 "Events-"time.
 
-###
+### io
 the components that are vanialla C++ are very different to the ones that have depenrencies such as direct-sound, etc.
 They require certain rituals to prepare too.
 
-Move all non-vanialla ones to `io` folder:
+Move all non-vanilla ones to `io` folder:
 `reconstruction/src/circuits/components/io`.
 
 But it should be sommething outside of `circuits` or `component` fodler. (in fact, they are probably not even "component"s. Also not `Source`s).
 
-
+In other words, they have a hardware dependency. (Or external software).
+(OOr even external libraries: boost, etc? Shoould this be a criterion)
+## framework ones
+Also related to io components:
+core/framework.h
