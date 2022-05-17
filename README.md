@@ -13,11 +13,22 @@ Keywords: C++, Real-time, Tcl/Tk, DirectSound, Steinberg VST.
 Mehr32 is a full digital Audio Engineering studio and toolbox written in C++/C.
 It was my final degree project developed back in 1999-2000. The full version will be available soon)
 Note that currently only the main file is provided. The library (.h) files will be added later.
-Note that this was not written in C++ ISO standards. It is using macros which are now discouraged in current C++ standards.
+Note  that this was not written in C++ ISO standards. It is using macros which are now discouraged in current C++ standards.
+
+#### IO implemented:
+* Steinberg VST
+* DirectSound
+* normal buffered Win32 sound output
+* SPDIF (FPGA-version only)
+#### Devices:
+* Microphone live (as part of above)
+* Audio-in live (as part of above)
+* Keyobard playing (live)
+* Progamatic sequence (melody)
 
 ### History
 * 1999: (v1) Based on an earlier project previous year 1999 [sohale/jMusic](https://github.com/sohale/jMusic)
-* 2000: (v2) Presented as BSc final project at UI (Thesis report available)
+* 2000: (v2) Presented as BSc final project at UI (Thesis report available) <span style="color:red">this version</span>
 * 2001: (v3) Further extentions: (VST plugin, Live Microphone input, granular synthesis, pitch)
 * 2004?: Lost all files due to loss of a hard-disk 🥺 in pre-github era.
 * 2002: FPGA implementation (2002?): SPDIF input and output fully implemented. See [^The-FPGA-version]
@@ -25,7 +36,7 @@ Note that this was not written in C++ ISO standards. It is using macros which ar
 
 ### Todo
 * Rewrite and refactor using C++ templates.
-* Revive yb reconstructing from the main.cpp from the BSc Thesis file.
+* Revive by reconstructing from the main.cpp from the BSc Thesis file.
 
 
 

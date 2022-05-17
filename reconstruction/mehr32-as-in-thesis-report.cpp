@@ -8,7 +8,12 @@
  * The original file contains 14800 lines of code (as in early 2001).
  * *************************************************************** */
 
-#include <conio.h>
+
+#include "reconstruction/src/core/base/base.h"
+
+#include <stdio>
+
+// #include <conio.h>
 #include "myheader.h"
 #include "Compont1.h"
 
@@ -77,17 +82,9 @@
 		return b;
 	}
 
-	#define KEYB(kbhit,nfreq) 	\
-		KeyboardHit1*kbhit=new KeyboardHit1(KeyboardHit1::_StandardMap,KeyboardHit1::_StandardOffset);	\
-		Component*nfreq=new NoteFreqS();	\
-		{Source*note=kbhit->lineout("char");	\
-		nfreq->attach("note",note);	\
-		nfreq->attachConstant("shift",0);}
+#include "reconstruction/src/easy/keyb.h"  // #define KEY
 
-
-	#define TIMER(srate) timer=new Timer();timer->reattachConstant("freq",srate);
-
-
+#include "reconstruction/src/easy/timer.h" // TIMER
 
 
 
@@ -107,164 +104,27 @@
 #include "./circuits/components/flang.h" // Source*flang0(...)
 
 
-void EffectPlayAFile2(char*filename)
-{
-	TIMER(22050);
-	NEWC(wavin, RawWaveIn8uMono,(filename,22050,0,false));
-	RATT(wavin,time,new KeyboardHit1("qwertyuiopzxcvbnm,./asdfghjkl;'[]",0));
+#include "reconstruction/src/demo-setups/effect_play_a_file2.h"  // EffectPlayAFile2  (PLAYMONO)
 
-	NEWC(flng, Flanger1, (Flanger1::TRIANGLE,
-		0.8*2 *3,
-		/*0.060*2*/
-		1/(0.8*2)/4/2*2 /2/2, //octave=1/f/4 (in triangle) octave=1/f/2 (in saw)
-		0.01,0));	//default params
-	ATT(flng, input, wavin);
-
-	PLAYMONO(selector(wavin,flng->getLineout(),"`1","Triangular Flanger"));
-}
-
-void EffectPlayAFile(char*filename)
-{
-	TIMER(22050);
-	NEWC(wavin, RawWaveIn8uMono,(filename,22050,0,false));
-	RATT(wavin,time,new KeyboardHit1("qwertyuiopzxcvbnm,./asdfghjkl;'[]",0));
-	PLAYMONO(selector3(wavin,chorus2(2,wavin),flang0(wavin),"`12","Normal|Chorus|Flanger"));
-}
+#include "reconstruction/src/demo-setups/effect_play_a_file1.h" // EffectPlayAFile()  (PLAYMONO)
 
 #include "./circuits/components/chorus_ll.h" // Component* chorusLL(...)
 
-/*****************************************************
- * An instrument with COOL NICE tiny voice (Nov 2000)
- *****************************************************/
-void pluckedTiny()	//18AzarThur1379 03:59pm-05:57pm
-{
-	TIMER(44100);
-
-	KEYB(kbhit,nfreq);
-
-		Component* asr=new ASR(9.0);
-		asr->attachConstant("rise",0);
-		asr->attachConstant("dur", 0);
-		asr->attachConstant("rel",0.05);
-		asr->reattachConstant("amp",0.10);
-		asr->attach("time",kbhit);
-
-		Component *randh=new RANDH(1.0/2.0);
-		randh->reattach("amp",asr);
-		Component*rs=randh;
-
-		Component*nfd=new Divide();
-		nfd->attachConstant("input",1);
-		nfd->attach("by",nfreq);
-
-	Component*mix=new Mix(2);
-	mix->attach("input0",rs);
-
-
-	Source*d=nfd;	//delay amount
-	Component*fbc0=new Cache();
-	Delay*delay=new Delay(1,false);
-	fbc0->attach("input",delay);
-	delay->attach("delay",d);
-	delay->attach("input",mix);
-
-	Component*ff=new LinearDistortion(0.9,0);
-	ff->attach("input",fbc0);
-	mix->attach("input1", ff);
-
-	PLAYMONO(boost(fbc0/*mix*/,4*4));
-
-}
+#include "reconstruction/src/demo-setups/plucked_tiny.h" // pluckedTiny() (PLAYMONO)
 
 #include "./circuits/components/chorus1.h" // Component* chorus
 
-/******************************************************
- * Plucked String with Chorus effect
- ******************************************************/
-void pluckedChorus()
-{
-	TIMER(44100);
-
-	KEYB(kbhit,nfreq);
-
-	NEWC(pluck, KarplusStrongPlucked1, ());
-	ATT(pluck, gain, 1);
-	ATT(pluck, freq, nfreq);
-	ATT(pluck, time, kbhit);
-
-	Cache*ss=new Cache();
-	ss->attach("input",pluck->getLineout()/*ssi*/);
-
-	Source*mix=selector(ss,chorus(2,ss),"`1", "Chorus");
-
-	//adds TANIN
-	const M=5;
-	real ptsX[M] = { -1.0, -0.5, 0, 0.5, 0.1 };
-	real ptsY[M] = { -1.0, -1.0, 0, 1.0, 1.0 };
-	Distortion*testPLi = new PartialLinearDistortion(M,ptsX, ptsY);
-	testPLi->attach("input",mix);
-
-	PLAYMONO(boost(
-		//mix
-		testPLi
-	,0.6));
-}
+#include "reconstruction/src/demo-setups/plucked_chorus.h" // pluckedChorus()  PLAYMONO
 
 
+#include "reconstruction/src/demo-setups/plucked_flang.h" // pluckedFlang() (PLAYMONO)
 
-/******************************************************
- * Plucked String with Flanger effect
- * //after ACM
- ******************************************************/
-void pluckedFlang()	//10AzarThur1379 03:40 to-have-done-something-for-today
-{
-	TIMER(44100);
+#include "reconstruction/src/circuits/instruments/retro1.h"
 
-	KEYB(kbhit,nfreq);
-
-	NEWC(pluck, KarplusStrongPlucked1, ());
-	ATT(pluck, gain, 1);
-	ATT(pluck, freq, nfreq);
-	ATT(pluck, time, kbhit);
-	Source*ss=pluck->getLineout();
-
-	Source*s=selector(ss,flang0(ss), "`1", "Flanger");
-	PLAYMONO(boost(s,0.6));
-}
-/******************************************************
- * Retro instrument
- ******************************************************/
-void retro1()
-{
-	timer=new Timer();
-	timer->reattachConstant("freq",44100);
-
-	KeyboardHit1*kbhit=new KeyboardHit1(KeyboardHit1::_StandardMap,KeyboardHit1::_StandardOffset);
-	Source*note=kbhit->lineout("char");
-	Component*nfreq=new NoteFreqS();
-	nfreq->attach("note",note);
-	nfreq->attachConstant("shift",0);	//necassary
-
-	Aggregate*pluck=new PluckedInstrument0();
-	pluck->attach("freq",nfreq);
-	pluck->attach("time",kbhit);
-	Source*po=pluck->getLineout();
-
-	Component*refl=new RetroAS1_Reflection_Sparse();
-	refl->attach("input",po);
-
-	Component*lp=new Filter1();
-	lp->attach("input",refl);
-	lp->attachConstant("freq",2000/4/3);
-	lp->attachConstant("width",2000/3);
-
-
-	PLAYMONO(lp);
-};
 
 #include "./circuits/components/cache.h" // Component* cache()
 
-#include "reconstruction/src/demo-setups/vocim2.h"
+#include "reconstruction/src/demo-setups/vosim2.h"
 #include "reconstruction/src/demo-setups/vosim1.h"
 
 #include "reconstruction/src/demo-setups/impulse2.h"
@@ -332,9 +192,7 @@ Source*GeneralOutputFilter(Source*x)
 	return lp;
 }
 
-#define ADDITEM(nm, name) {strcat(names, "  " ); strcat(names, #nm ); strcat(names, " = " ); strcat(names, #name ); strcat(names, "\n" );if(maxi<nm)maxi=nm;}
-
-
+#include "reconstruction/src/easy/add_item.h"
 
 
 
