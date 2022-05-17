@@ -67,3 +67,10 @@ core/framework.h
 ### Idea: Extract the list of all all-caps DSL-macros
 `rep -rne '[A-Z][A-Z][A-Z]*' .|grep -ve './.git'|jrep 'RE1("[^a-z]([A-Z]{2,100}\\d{0,100})")' |sort|uniq|xargs echo`
 ACM ADDITEM ASR ATT BS BUT COMPONENT COOL DSL FILENAME FIR FIRF FM FRQ GUI IF KEY KEYB KH KS LL MDEPTH MFREQ MRISE NEWC NOISE NULL OO OSIMW PI PLAYMONO PLAYSTEREO PS1 RAND RANDH RANDI RATIO RATT README REAL REPOROOT TANIN TIMER TT VOSIM VOSIM1 VOSIM2 WP32 XM
+
+### Add classes
+`grep -rne 'new ' .|grep -ve './.git' | jrep 'RE1("new ([^\( ]*)")' | sort|uniq|xargs echo`
+shows:
+```
+ASR Alpha Amp BasicVOSIMWaveform BasicVOSIMWaveform0 Cache Comb Constant Delay Detune0 Divide FIRFew0 Filter1 KarplusStrongPlucked1 KarplusStrongPlucked2 KeyboardHit1 LazyLinear LinearDistortion Mix NoDC NoteFreq NoteFreqS PartialLinearDistortion PluckedInstrument0 RANDH RANDI RawRecorder RawWaveIn16sMono RetroAS1_Reflection_Diffuse RetroAS1_Reflection_Sparse Reverb0 Reverb1 SinOscillator SinPositiveOscillator StereoBalanceSimple Timer strange
+```
