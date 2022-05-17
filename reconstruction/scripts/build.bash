@@ -14,3 +14,5 @@ docker run -it --rm --name conangcc11 -v $REPOROOT:/mehr32 conanio/gcc11-ubuntu1
       gcc mehr32-as-in-thesis-report.cpp ;
       bash
       "
+
+# https://docs.conan.io/en/latest/howtos/run_conan_in_docker.html
