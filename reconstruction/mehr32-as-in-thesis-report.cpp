@@ -94,25 +94,26 @@
 
 #include "./PluckIns.h" // void pluck2(...)
 
-#include "./circuits/instruments/percussions.h" // rename: rythms.h  // void rythms()
-#include "./circuits/instruments/space_pluck.h" // void space_pluck()
-// #include "./circuits/space_pluck.h"
+#include "reconstruction/src/circuits/instruments/percussions.h" // rename: rythms.h  // void rythms()
+#include "reconstruction/src/circuits/instruments/space_pluck.h" // void space_pluck()
+// #include "reconstruction/src/circuits/space_pluck.h"
 
-#include "./circuits/demo_setups/karplus.h" // void karplus()
-#include "./circuits/components/chorus2.h" // Component* chorus2(...)
+#include "reconstruction/src/circuits/demo_setups/karplus.h" // void karplus()
 
-#include "./circuits/components/flang.h" // Source*flang0(...)
+#include "reconstruction/src/circuits/components/chorus2.h" // Component* chorus2(...)
+
+#include "reconstruction/src/circuits/components/flang.h" // Source*flang0(...)
 
 
 #include "reconstruction/src/demo-setups/effect_play_a_file2.h"  // EffectPlayAFile2  (PLAYMONO)
 
 #include "reconstruction/src/demo-setups/effect_play_a_file1.h" // EffectPlayAFile()  (PLAYMONO)
 
-#include "./circuits/components/chorus_ll.h" // Component* chorusLL(...)
+#include "reconstruction/src/circuits/components/chorus_ll.h" // Component* chorusLL(...)
 
 #include "reconstruction/src/demo-setups/plucked_tiny.h" // pluckedTiny() (PLAYMONO)
 
-#include "./circuits/components/chorus1.h" // Component* chorus
+#include "reconstruction/src/circuits/components/chorus1.h" // Component* chorus
 
 #include "reconstruction/src/demo-setups/plucked_chorus.h" // pluckedChorus()  PLAYMONO
 
@@ -122,7 +123,7 @@
 #include "reconstruction/src/circuits/instruments/retro1.h"
 
 
-#include "./circuits/components/cache.h" // Component* cache()
+#include "reconstruction/src/circuits/components/cache.h" // Component* cache()
 
 #include "reconstruction/src/demo-setups/vosim2.h"
 #include "reconstruction/src/demo-setups/vosim1.h"
