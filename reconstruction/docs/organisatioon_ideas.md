@@ -63,3 +63,7 @@ In other words, they have a hardware dependency. (Or external software).
 ## framework ones
 Also related to io components:
 core/framework.h
+
+### Idea: Extract the list of all all-caps DSL-macros
+`rep -rne '[A-Z][A-Z][A-Z]*' .|grep -ve './.git'|jrep 'RE1("[^a-z]([A-Z]{2,100}\\d{0,100})")' |sort|uniq|xargs echo`
+ACM ADDITEM ASR ATT BS BUT COMPONENT COOL DSL FILENAME FIR FIRF FM FRQ GUI IF KEY KEYB KH KS LL MDEPTH MFREQ MRISE NEWC NOISE NULL OO OSIMW PI PLAYMONO PLAYSTEREO PS1 RAND RANDH RANDI RATIO RATT README REAL REPOROOT TANIN TIMER TT VOSIM VOSIM1 VOSIM2 WP32 XM

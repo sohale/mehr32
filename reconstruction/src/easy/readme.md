@@ -18,6 +18,9 @@ This was a DSL before DSL was a thing
 PLAYSTEREO
 PLAYMONO
 ```
+```
+NEWC(sw, SwitchN, (3));
+```
 
 non-macro:
 ```
