@@ -1,3 +1,3 @@
-class KeyboardHit1 {
-
+class KeyboardHit1
+{
 };

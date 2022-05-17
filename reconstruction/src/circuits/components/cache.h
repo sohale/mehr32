@@ -4,10 +4,10 @@
  *  This prevents multiple evaluations.
  ******************************************************/
 
-Component*cache(Source*s)
+Component *cache(Source *s)
 {
-	Component*c=new Cache();
-	c->attach("input",s);
-	return c;
+  Component *c = new Cache();
+  c->attach("input", s);
+  return c;
 }
 // The coomponent version of the class Cache

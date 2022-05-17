@@ -1,4 +1,4 @@
 
-class Source {
-
+class Source
+{
 };

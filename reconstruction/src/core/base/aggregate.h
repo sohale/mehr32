@@ -1,3 +1,3 @@
-class Aggregate {
-
+class Aggregate
+{
 };
