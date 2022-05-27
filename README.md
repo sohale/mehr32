@@ -50,7 +50,7 @@ Note  that this was not written in C++ ISO standards. It is using macros which a
 FPGA implementation: SPDIF input and output fully implemented.
 
 Written in VHDL, implemented in Presented in Sharif FPGA Design Contest [~fdc](http://ce.sharif.edu/~fdc/)
-and won joint first rank award (2x gold coins 🟡🟡 prize)
+and won joint first rank award (2x gold coins 🥇🥇 prize)
 (Provided live IO from commerciall audio players but due to short time, only the Simple FIR & IIR filters were ported to hardware / VHDL. It fullfilled and demonstrated the propsal except for the static-RAM part. ).
 Here is my [proposal](reconstruction/docs/25-fdc-sohail.pdf) before winning!
 ([Original page](http://ce.sharif.edu/~fdc/proposals/25.pdf) among [list of proposals](http://ce.sharif.edu/~fdc/proposals/sample.html) ).
