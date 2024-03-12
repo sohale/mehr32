@@ -1,21 +1,17 @@
 # A Standalone Realtime Digital Audio Reverberator
 
 Proposal:
-* pdf
-* original
+* [pdf](reconstruction/docs/25-fdc-sohail.pdf)
+* [original](https://web.archive.org/web/20060714033039/http://ce.sharif.edu/~fdc/proposals/25.pdf)
 
 
-Solution:
 
-### Links
 
-https://web.archive.org/web/20060714032855/http://ce.sharif.edu/~fdc/comments.html
-
-https://web.archive.org/web/20060712053344/http://ce.sharif.edu/~fdc/sample.html
-
-https://web.archive.org/web/20060712053251/http://ce.sharif.edu/~fdc/time.html
-
-https://web.archive.org/web/20060709182237/http://ce.sharif.edu/~fdc/
+* Other Links
+   * https://web.archive.org/web/20060714032855/http://ce.sharif.edu/~fdc/comments.html
+   * https://web.archive.org/web/20060712053344/http://ce.sharif.edu/~fdc/sample.html
+   * https://web.archive.org/web/20060712053251/http://ce.sharif.edu/~fdc/time.html
+   * https://web.archive.org/web/20060709182237/http://ce.sharif.edu/~fdc/
 
 ## Proposal
 
@@ -43,3 +39,5 @@ Sohail Siadat-nejad
 Computer Science MSc student,
 Math dept, Sharif university
 2003
+
+## Solution:
