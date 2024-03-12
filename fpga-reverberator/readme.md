@@ -1,7 +1,7 @@
 # A Standalone Realtime Digital Audio Reverberator
 
 Proposal:
-* [pdf](reconstruction/docs/25-fdc-sohail.pdf)
+* [pdf](../reconstruction/docs/25-fdc-sohail.pdf)
 * [original](https://web.archive.org/web/20060714033039/http://ce.sharif.edu/~fdc/proposals/25.pdf)
 
 
